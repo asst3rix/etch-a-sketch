@@ -7,14 +7,15 @@
     margin: 50px auto;
     width: 700px;
     height: 700px;
-    border: 1px solid black;
+    border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
 }
 
 #container div {
-    flex: 1 0 5.96%;
-    border: 1px solid black;
+    flex: 1 0 6.25%;
+    border: 1px solid lightgrey;
+    margin: -1px; /* To counter the 1px border and not mess with the grid alignement */
 }
 
 .mouseover {
