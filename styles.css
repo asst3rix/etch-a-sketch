@@ -9,6 +9,10 @@
     width: 700px;
 }
 
+#parameters div {
+    margin-top: 15px;
+}
+
 #grid {
     height: 700px;
     border: 3px solid black;
@@ -19,8 +23,4 @@
 #grid div {
     border: 1px solid lightgrey;
     margin: -1px; /* To counter the 1px border and not mess with the grid alignement */
-}
-
-.mouseover {
-    background-color: black;
 }
