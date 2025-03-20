@@ -7,24 +7,24 @@ createGrid(gridSize.value);
 
 gridSizeButton.addEventListener("click", () => { changeGridSize(gridSize.value); });
 
-// We select all the squares
-const squares = document.querySelectorAll("#grid div");
-// We affect to all the squares, a mouseover EventListener that add a CSS class
-squares.forEach((div) => {
-    div.addEventListener("click", () => {
-        div.classList.add("mouseover");
-    });
-});
-
 function createGrid(size) {
     if (size < 1 || size > 100) {
         size = 16;
     }
-    for (let i = 0; i < size*size; i++) {
+    for (let i = 0; i < size * size; i++) {
         const div = document.createElement("div");
-        div.style.flex = "1 0 " + 100/size + "%"; // adjust the size of the squares
+        div.style.flex = "1 0 " + 100 / size + "%"; // adjust the size of the squares
         grid.appendChild(div);
     }
+
+    // We select all the squares
+    const squares = document.querySelectorAll("#grid div");
+    // We affect to all the squares, a mouseover EventListener that add a CSS class
+    squares.forEach((div) => {
+        div.addEventListener("click", () => {
+            div.classList.add("mouseover");
+        });
+    });
 }
 
 function changeGridSize(size) {
