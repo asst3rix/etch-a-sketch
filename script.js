@@ -21,7 +21,7 @@ function createGrid(size) {
     const squares = document.querySelectorAll("#grid div");
     // We affect to all the squares, a mouseover EventListener that add a CSS class
     squares.forEach((div) => {
-        div.addEventListener("click", () => {
+        div.addEventListener("mouseover", () => {
             div.classList.add("mouseover");
         });
     });
