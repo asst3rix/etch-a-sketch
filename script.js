@@ -17,13 +17,19 @@ function createGrid(size) {
         grid.appendChild(div);
     }
 
+    const blackColorButton = document.querySelector("#black");
+    const randomColorButton = document.querySelector("#random");
+
     // We select all the squares
     const squares = document.querySelectorAll("#grid div");
     // We affect to all the squares, a mouseover EventListener that add a CSS class
     squares.forEach((div) => {
         div.addEventListener("mouseover", () => {
-            //div.classList.add("mouseover");
-            div.style.backgroundColor = "rgb(" + getRandomInt(256) + "," + getRandomInt(256) + "," + getRandomInt(256) + ")";
+            if (blackColorButton.checked) {
+                div.style.backgroundColor = "black";
+            } else {
+                div.style.backgroundColor = "rgb(" + getRandomInt(256) + "," + getRandomInt(256) + "," + getRandomInt(256) + ")";
+            }
         });
     });
 }
