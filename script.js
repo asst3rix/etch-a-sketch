@@ -39,5 +39,6 @@ function changeGridSize(size) {
 }
 
 function getRandomInt(max) {
+    // exemple: max = 3, result = 0, 1 or 2
     return Math.floor(Math.random() * max);
 }
