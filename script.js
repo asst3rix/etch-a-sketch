@@ -17,9 +17,12 @@ squares.forEach((div) => {
 });
 
 function createGrid(size) {
+    if (size < 1 || size > 100) {
+        size = 16;
+    }
     for (let i = 0; i < size*size; i++) {
         const div = document.createElement("div");
-        div.style.flex = "1 0 " + 100/size + "%";
+        div.style.flex = "1 0 " + 100/size + "%"; // adjust the size of the squares
         grid.appendChild(div);
     }
 }
