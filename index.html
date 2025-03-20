@@ -11,9 +11,15 @@
 
 <body>
     <div id="parameters">
-        <label for="gridSize">Size of the grid (between 1x1 and 100x100):</label>
-        <input type="number" id="gridSize" name="gridSize" min="1" max="100" value="16">
-        <input type="submit" id="gridSizeButton" value="Submit">
+        <div id="size">
+            <label for="gridSize">Size of the grid (between 1x1 and 100x100):</label>
+            <input type="number" id="gridSize" name="gridSize" min="1" max="100" value="16">
+            <input type="submit" id="gridSizeButton" value="Submit">
+        </div>
+        <div id="color">
+            <input type="radio" name="color" id="black" value="Black"> <label>Black</label>
+            <input type="radio" name="color" id="random" value="Random"> <label>Random</label>
+        </div>
     </div>
     <div id="grid"></div>
 </body>
