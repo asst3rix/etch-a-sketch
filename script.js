@@ -22,7 +22,8 @@ function createGrid(size) {
     // We affect to all the squares, a mouseover EventListener that add a CSS class
     squares.forEach((div) => {
         div.addEventListener("mouseover", () => {
-            div.classList.add("mouseover");
+            //div.classList.add("mouseover");
+            div.style.backgroundColor = "rgb(" + getRandomInt(256) + "," + getRandomInt(256) + "," + getRandomInt(256) + ")";
         });
     });
 }
@@ -35,4 +36,8 @@ function changeGridSize(size) {
 
     // To create it again
     createGrid(size);
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }
