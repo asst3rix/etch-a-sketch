@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#container {
+#grid {
     margin: 50px auto;
     width: 700px;
     height: 700px;
@@ -12,7 +12,7 @@
     flex-wrap: wrap;
 }
 
-#container div {
+#grid div {
     flex: 1 0 6.25%;
     border: 1px solid lightgrey;
     margin: -1px; /* To counter the 1px border and not mess with the grid alignement */
